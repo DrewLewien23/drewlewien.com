@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  background-color: grey;
+}
+
+/* buttons! */
+
+.add-cookie {
+  margin-right: 500px;
+}
+
+/* images! */
+
+.scripts-image,
+.degrees-image,
+.skills-image,
+.trash-image,
+.jobs-image,
+.cookie-image 
+{
+  height: 35px;
+  width: 35px;
+  margin-top: 33px;
+  margin-left: 30px;
+}

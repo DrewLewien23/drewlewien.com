@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drew Lewien's Life</title>
+    <link rel="stylesheet" href="drewlewien-css/header.css">
+    <link rel="stylesheet" href="drewlewien-css/homescreen.css">
+  </head>
+  <body>
+    <!-- Intro text -->
+    <p>Welcome to <strong>Drew Lewien's </strong>Life!</p>
+    <p class="cookie-counter-text" id="cookieCounter"></p>
+    <!-- style for buttons and text -->
+    <style>
+      button {
+        font-family: Roboto;
+        font-size: 25px;
+        font-weight: bold;
+        border: none;
+        background-color: grey;
+        cursor: pointer; 
+      }
+      button:hover {
+        opacity: 70%;
+        transition: opacity .1s;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    </style>
+    <!-- header -->
+    <div class="header">
+      <img class="scripts-image" src="images/writing.jpg">
+      <button class="scripts-button" onclick="scriptsPage()">
+        Scripts
+      </button>
+      <img class="degrees-image" src="images/paper.jpg">
+      <button class="degrees-button" onclick="degreesPage()">
+        Degrees
+      </button>
+      <img class="skills-image" src="images/skills.webp">
+      <button class="skills-button" onclick="skillsPage()">
+        Skills
+      </button>
+      <img class="trash-image" src="images/trash.jpg">
+      <button class="misc-button" onclick="miscPage()">
+        Misc
+      </button>
+      <img class="jobs-image" src="images/jobs.jpg">
+      <button class="jobs-button" onclick="jobsPage()">
+        Jobs
+      </button>
+      <img class="cookie-image" src="images/chocolate-chip-cookie.webp">
+      <button class="add-cookie" onclick="addingCookie()">
+        Add Cookie
+      </button>
+    </div>
+    <!-- homescreen -->
+    <img class="beachpic-image" src="images/beachpic.JPG">
+    <img class="guitarhero-image" src="images/guitar-hero.JPG">
+    <img class="cartoondrew-image" src="images/cartoon-drew.PNG">
+
+    <button onclick="wow()">
+      Don't click me!
+    </button>
+
+    <button onclick="nuke()">
+      Seriously, don't click me!
+    </button>
+
+    <script>
+      function scriptsPage() {
+        window.location.href = "http://127.0.0.1:5500/scripts-page.html";
+      }
+
+      function degreesPage() {
+        window.location.href = "http://127.0.0.1:5500/degrees-page.html";
+      }
+
+      function jobsPage() {
+        window.location.href = "http://127.0.0.1:5500/jobs-page.html";
+      }
+
+      function skillsPage() {
+        window.location.href="http://127.0.0.1:5500/skills-page.html";
+      }
+
+      function miscPage() {
+        window.location.href="http://127.0.0.1:5500/misc-page.html";
+      }
+
+      function wow() {
+        alert('Wow. I cannot believe you did that, dude.');
+      }
+
+      function nuke() {
+        document.body.innerHTML = 'okay. you killed me. happy?';
+      }
+
+      cookieCounter = 0;
+
+      function addingCookie() {
+        cookieCounter += 1;
+        console.log(cookieCounter);
+        document.getElementById("cookieCounter").textContent = `Cookie Counter: ${cookieCounter}`;
+      }
+
+      document.getElementById("cookieCounter").textContent = `Cookie Counter: ${cookieCounter}`;
+
+    </script>
+  </body>
+</html>
